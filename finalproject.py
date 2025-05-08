@@ -112,7 +112,7 @@ if uploaded_file is not None:
 
         # Define who qualifies: must have at least two non-Associate programs
         def qualifies(programs):
-            return len(programs) >= 2 and all(p.startswith(('C', 'D')) for p in programs)
+            return len(programs) == 2 and all(p.startswith(('C', 'D')) for p in programs)
 
         # Filter to only qualifying students
         qualifying_students = student_programs[student_programs['Program_Codes'].apply(qualifies)]
@@ -146,9 +146,9 @@ if uploaded_file is not None:
         # Merge descriptions and codes
         student_programs['Program_Codes'] = student_program_codes['PROGRAMS']
 
-        # Define who qualifies: must have at least two programs from A/C/D
+        # Define who qualifies: must have two programs from A/C/D
         def qualifies(programs):
-            return len(programs) >= 2 and all(p.startswith(('A', 'C', 'D')) for p in programs)
+            return len(programs) == 2 and all(p.startswith(('A', 'C', 'D')) for p in programs)
 
         # Filter to only qualifying students
         qualifying_students = student_programs[student_programs['Program_Codes'].apply(qualifies)]
