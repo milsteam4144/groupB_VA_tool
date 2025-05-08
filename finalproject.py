@@ -208,7 +208,7 @@ if uploaded_file is not None:
         st.write(f"Showing {len(filtered)} combinations")
         st.dataframe(filtered)
 
-        st.subheader("Top 10 Combinations")
+        st.subheader("Top Combinations")
         top10 = filtered.sort_values(by="Count", ascending=False).head(10)
         chart = alt.Chart(top10).mark_bar().encode(
             x=alt.X('Count:Q'),
@@ -224,7 +224,7 @@ if uploaded_file is not None:
         st.write(f"Showing {len(filtered)} combinations")
         st.dataframe(filtered)
 
-        st.subheader("Top 10 Combinations")
+        st.subheader("Top Combinations")
         top10 = filtered.sort_values(by="Count", ascending=False).head(10)
         chart = alt.Chart(top10).mark_bar().encode(
             x=alt.X('Count:Q'),
@@ -240,7 +240,7 @@ if uploaded_file is not None:
         st.write(f"Showing {len(filtered)} combinations")
         st.dataframe(filtered)
 
-        st.subheader("Top 10 Combinations")
+        st.subheader("Top Combinations")
         top10 = filtered.sort_values(by="Count", ascending=False).head(10)
         chart = alt.Chart(top10).mark_bar().encode(
             x=alt.X('Count:Q'),
